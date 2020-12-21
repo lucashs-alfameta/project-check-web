@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="An web app for project management">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="project_check">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <title>project_check</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+  <!-- Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+  <!-- Configurações do firebase para ambiente de PRODUÇÃO -->
+  <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyBzIeupfBn9yRy1_AksK2-JLnT5gY4pa-Q",
+          authDomain: "project-check-50c36.firebaseapp.com",
+          databaseURL: "https://project-check-50c36.firebaseio.com",
+          projectId: "project-check-50c36",
+          storageBucket: "project-check-50c36.appspot.com",
+          messagingSenderId: "111931099045",
+          appId: "1:111931099045:web:2bf28b11b8c6b459fbca4c",
+          measurementId: "G-SHCD85W6JX"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+  </script>
+
+
+  <!-- Configurações do firebase para ambiente de DESENVOLVIMENTO -->
+  <!--  <script>-->
+  <!--    // Your web app's Firebase configuration-->
+  <!--    var firebaseConfig = {-->
+  <!--      apiKey: "AIzaSyC7UhuXxvrJGi7QIOVGCOUNNfcKnmEJ2JA",-->
+  <!--      authDomain: "project-check-dev.firebaseapp.com",-->
+  <!--      databaseURL: "https://project-check-dev.firebaseio.com",-->
+  <!--      projectId: "project-check-dev",-->
+  <!--      storageBucket: "project-check-dev.appspot.com",-->
+  <!--      messagingSenderId: "511292802727",-->
+  <!--      appId: "1:511292802727:web:14a5c2cb9722e7287dfd82"-->
+  <!--    };-->
+  <!--    // Initialize Firebase-->
+  <!--    firebase.initializeApp(firebaseConfig);-->
+  <!--  </script>-->
+
+</head>
+<body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js?v=3255266725');
+      });
+    }
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
